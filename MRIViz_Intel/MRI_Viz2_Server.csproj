@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6BB2FAE-316F-47E3-A5DE-52D1FC478282}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MRIViz_Intel</RootNamespace>
+    <AssemblyName>iNetwork Server Template1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GroupLab.iNetwork">
+      <HintPath>..\..\..\Users\Apoorve Chokshi\Documents\GroupLab iNetwork Toolit, Basic\GroupLab.iNetwork.dll</HintPath>
+    </Reference>
+    <Reference Include="IntelCameraDepthQuery">
+      <HintPath>..\..\IntelCameraDepthQuery\IntelCameraDepthQuery\bin\Debug\IntelCameraDepthQuery.exe</HintPath>
+    </Reference>
+    <Reference Include="libpxcclr">
+      <HintPath>..\..\..\Program Files (x86)\Intel\PCSDK\bin\win32\libpxcclr.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="MRIImages\.DS_Store" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="MRIImages\full.jpg" />
+    <Resource Include="MRIImages\IM-0001-0541.jpg" />
+    <Resource Include="MRIImages\IM-0001-0542.jpg" />
+    <Resource Include="MRIImages\IM-0001-0543.jpg" />
+    <Resource Include="MRIImages\IM-0001-0544.jpg" />
+    <Resource Include="MRIImages\IM-0001-0545.jpg" />
+    <Resource Include="MRIImages\IM-0001-0546.jpg" />
+    <Resource Include="MRIImages\IM-0001-0547.jpg" />
+    <Resource Include="MRIImages\IM-0001-0548.jpg" />
+    <Resource Include="MRIImages\IM-0001-0549.jpg" />
+    <Resource Include="MRIImages\IM-0001-0550.jpg" />
+    <Resource Include="MRIImages\IM-0001-0551.jpg" />
+    <Resource Include="MRIImages\IM-0001-0552.jpg" />
+    <Resource Include="MRIImages\IM-0001-0553.jpg" />
+    <Resource Include="MRIImages\IM-0001-0554.jpg" />
+    <Resource Include="MRIImages\IM-0001-0555.jpg" />
+    <Resource Include="MRIImages\IM-0001-0556.jpg" />
+    <Resource Include="MRIImages\IM-0001-0557.jpg" />
+    <Resource Include="MRIImages\IM-0001-0558.jpg" />
+    <Resource Include="MRIImages\IM-0001-0559.jpg" />
+    <Resource Include="MRIImages\IM-0001-0560.jpg" />
+    <Resource Include="MRIImages\IM-0001-0561.jpg" />
+    <Resource Include="MRIImages\IM-0001-0562.jpg" />
+    <Resource Include="MRIImages\IM-0001-0563.jpg" />
+    <Resource Include="MRIImages\IM-0001-0564.jpg" />
+    <Resource Include="MRIImages\IM-0001-0565.jpg" />
+    <Resource Include="MRIImages\IM-0001-0566.jpg" />
+    <Resource Include="MRIImages\IM-0001-0567.jpg" />
+    <Resource Include="MRIImages\IM-0001-0568.jpg" />
+    <Resource Include="MRIImages\IM-0001-0569.jpg" />
+    <Resource Include="MRIImages\IM-0001-0570.jpg" />
+    <Resource Include="MRIImages\IM-0001-0571.jpg" />
+    <Resource Include="MRIImages\IM-0001-0572.jpg" />
+    <Resource Include="MRIImages\IM-0001-0573.jpg" />
+    <Resource Include="MRIImages\IM-0001-0574.jpg" />
+    <Resource Include="MRIImages\IM-0001-0575.jpg" />
+    <Resource Include="MRIImages\IM-0001-0576.jpg" />
+    <Resource Include="MRIImages\IM-0001-0577.jpg" />
+    <Resource Include="MRIImages\IM-0001-0578.jpg" />
+    <Resource Include="MRIImages\IM-0001-0579.jpg" />
+    <Resource Include="MRIImages\IM-0001-0580.jpg" />
+    <Resource Include="MRIImages\IM-0001-0581.jpg" />
+    <Resource Include="MRIImages\IM-0001-0582.jpg" />
+    <Resource Include="MRIImages\IM-0001-0583.jpg" />
+    <Resource Include="MRIImages\IM-0001-0584.jpg" />
+    <Resource Include="MRIImages\IM-0001-0585.jpg" />
+    <Resource Include="MRIImages\IM-0001-0586.jpg" />
+    <Resource Include="MRIImages\IM-0001-0587.jpg" />
+    <Resource Include="MRIImages\IM-0001-0588.jpg" />
+    <Resource Include="MRIImages\IM-0001-0589.jpg" />
+    <Resource Include="MRIImages\IM-0001-0590.jpg" />
+    <Resource Include="MRIImages\IM-0001-0591.jpg" />
+    <Resource Include="MRIImages\IM-0001-0592.jpg" />
+    <Resource Include="MRIImages\IM-0001-0593.jpg" />
+    <Resource Include="MRIImages\IM-0001-0594.jpg" />
+    <Resource Include="MRIImages\IM-0001-0595.jpg" />
+    <Resource Include="MRIImages\IM-0001-0596.jpg" />
+    <Resource Include="MRIImages\IM-0001-0597.jpg" />
+    <Resource Include="MRIImages\IM-0001-0598.jpg" />
+    <Resource Include="MRIImages\IM-0001-0599.jpg" />
+    <Resource Include="MRIImages\IM-0001-0600.jpg" />
+    <Resource Include="MRIImages\IM-0001-0601.jpg" />
+    <Resource Include="MRIImages\IM-0001-0602.jpg" />
+    <Resource Include="MRIImages\IM-0001-0603.jpg" />
+    <Resource Include="MRIImages\IM-0001-0604.jpg" />
+    <Resource Include="MRIImages\IM-0001-0605.jpg" />
+    <Resource Include="MRIImages\IM-0001-0606.jpg" />
+    <Resource Include="MRIImages\IM-0001-0607.jpg" />
+    <Resource Include="MRIImages\IM-0001-0608.jpg" />
+    <Resource Include="MRIImages\IM-0001-0609.jpg" />
+    <Resource Include="MRIImages\IM-0001-0610.jpg" />
+    <Resource Include="MRIImages\IM-0001-0611.jpg" />
+    <Resource Include="MRIImages\IM-0001-0612.jpg" />
+    <Resource Include="MRIImages\IM-0001-0613.jpg" />
+    <Resource Include="MRIImages\IM-0001-0614.jpg" />
+    <Resource Include="MRIImages\IM-0001-0615.jpg" />
+    <Resource Include="MRIImages\IM-0001-0616.jpg" />
+    <Resource Include="MRIImages\IM-0001-0617.jpg" />
+    <Resource Include="MRIImages\IM-0001-0618.jpg" />
+    <Resource Include="MRIImages\IM-0001-0619.jpg" />
+    <Resource Include="MRIImages\IM-0001-0620.jpg" />
+    <Resource Include="MRIImages\IM-0001-0621.jpg" />
+    <Resource Include="MRIImages\IM-0001-0622.jpg" />
+    <Resource Include="MRIImages\IM-0001-0623.jpg" />
+    <Resource Include="MRIImages\IM-0001-0624.jpg" />
+    <Resource Include="MRIImages\IM-0001-0625.jpg" />
+    <Resource Include="MRIImages\IM-0001-0626.jpg" />
+    <Resource Include="MRIImages\IM-0001-0627.jpg" />
+    <Resource Include="MRIImages\IM-0001-0628.jpg" />
+    <Resource Include="MRIImages\IM-0001-0629.jpg" />
+    <Resource Include="MRIImages\IM-0001-0630.jpg" />
+    <Resource Include="MRIImages\IM-0001-0631.jpg" />
+    <Resource Include="MRIImages\IM-0001-0632.jpg" />
+    <Resource Include="MRIImages\IM-0001-0633.jpg" />
+    <Resource Include="MRIImages\IM-0001-0634.jpg" />
+    <Resource Include="MRIImages\IM-0001-0635.jpg" />
+    <Resource Include="MRIImages\IM-0001-0636.jpg" />
+    <Resource Include="MRIImages\IM-0001-0637.jpg" />
+    <Resource Include="MRIImages\IM-0001-0638.jpg" />
+    <Resource Include="MRIImages\IM-0001-0639.jpg" />
+    <Resource Include="MRIImages\IM-0001-0640.jpg" />
+    <Resource Include="MRIImages\IM-0001-0641.jpg" />
+    <Resource Include="MRIImages\IM-0001-0642.jpg" />
+    <Resource Include="MRIImages\IM-0001-0643.jpg" />
+    <Resource Include="MRIImages\IM-0001-0644.jpg" />
+    <Resource Include="MRIImages\IM-0001-0645.jpg" />
+    <Resource Include="MRIImages\IM-0001-0646.jpg" />
+    <Resource Include="MRIImages\IM-0001-0647.jpg" />
+    <Resource Include="MRIImages\IM-0001-0648.jpg" />
+    <Resource Include="MRIImages\IM-0001-0649.jpg" />
+    <Resource Include="MRIImages\IM-0001-0650.jpg" />
+    <Resource Include="MRIImages\IM-0001-0651.jpg" />
+    <Resource Include="MRIImages\IM-0001-0652.jpg" />
+    <Resource Include="MRIImages\IM-0001-0653.jpg" />
+    <Resource Include="MRIImages\IM-0001-0654.jpg" />
+    <Resource Include="MRIImages\IM-0001-0655.jpg" />
+    <Resource Include="MRIImages\IM-0001-0656.jpg" />
+    <Resource Include="MRIImages\IM-0001-0657.jpg" />
+    <Resource Include="MRIImages\IM-0001-0658.jpg" />
+    <Resource Include="MRIImages\IM-0001-0659.jpg" />
+    <Resource Include="MRIImages\IM-0001-0660.jpg" />
+    <Resource Include="MRIImages\IM-0001-0661.jpg" />
+    <Resource Include="MRIImages\IM-0001-0662.jpg" />
+    <Resource Include="MRIImages\IM-0001-0663.jpg" />
+    <Resource Include="MRIImages\IM-0001-0664.jpg" />
+    <Resource Include="MRIImages\IM-0001-0665.jpg" />
+    <Resource Include="MRIImages\IM-0001-0666.jpg" />
+    <Resource Include="MRIImages\IM-0001-0667.jpg" />
+    <Resource Include="MRIImages\IM-0001-0668.jpg" />
+    <Resource Include="MRIImages\IM-0001-0669.jpg" />
+    <Resource Include="MRIImages\IM-0001-0670.jpg" />
+    <Resource Include="MRIImages\IM-0001-0671.jpg" />
+    <Resource Include="MRIImages\IM-0001-0672.jpg" />
+    <Resource Include="MRIImages\IM-0001-0673.jpg" />
+    <Resource Include="MRIImages\IM-0001-0674.jpg" />
+    <Resource Include="MRIImages\IM-0001-0675.jpg" />
+    <Resource Include="MRIImages\IM-0001-0676.jpg" />
+    <Resource Include="MRIImages\IM-0001-0677.jpg" />
+    <Resource Include="MRIImages\IM-0001-0678.jpg" />
+    <Resource Include="MRIImages\IM-0001-0679.jpg" />
+    <Resource Include="MRIImages\IM-0001-0680.jpg" />
+    <Resource Include="MRIImages\IM-0001-0681.jpg" />
+    <Resource Include="MRIImages\IM-0001-0682.jpg" />
+    <Resource Include="MRIImages\IM-0001-0683.jpg" />
+    <Resource Include="MRIImages\IM-0001-0684.jpg" />
+    <Resource Include="MRIImages\IM-0001-0685.jpg" />
+    <Resource Include="MRIImages\IM-0001-0686.jpg" />
+    <Resource Include="MRIImages\IM-0001-0687.jpg" />
+    <Resource Include="MRIImages\IM-0001-0688.jpg" />
+    <Resource Include="MRIImages\IM-0001-0689.jpg" />
+    <Resource Include="MRIImages\IM-0001-0690.jpg" />
+    <Resource Include="MRIImages\IM-0001-0691.jpg" />
+    <Resource Include="MRIImages\IM-0001-0692.jpg" />
+    <Resource Include="MRIImages\IM-0001-0693.jpg" />
+    <Resource Include="MRIImages\IM-0001-0694.jpg" />
+    <Resource Include="MRIImages\IM-0001-0695.jpg" />
+    <Resource Include="MRIImages\IM-0001-0696.jpg" />
+    <Resource Include="MRIImages\IM-0001-0697.jpg" />
+    <Resource Include="MRIImages\IM-0001-0698.jpg" />
+    <Resource Include="MRIImages\IM-0001-0699.jpg" />
+    <Resource Include="MRIImages\IM-0001-0700.jpg" />
+    <Resource Include="MRIImages\IM-0001-0701.jpg" />
+    <Resource Include="MRIImages\IM-0001-0702.jpg" />
+    <Resource Include="MRIImages\IM-0001-0703.jpg" />
+    <Resource Include="MRIImages\IM-0001-0704.jpg" />
+    <Resource Include="MRIImages\IM-0001-0705.jpg" />
+    <Resource Include="MRIImages\IM-0001-0706.jpg" />
+    <Resource Include="MRIImages\IM-0001-0707.jpg" />
+    <Resource Include="MRIImages\IM-0001-0708.jpg" />
+    <Resource Include="MRIImages\IM-0001-0709.jpg" />
+    <Resource Include="MRIImages\IM-0001-0710.jpg" />
+    <Resource Include="MRIImages\IM-0001-0711.jpg" />
+    <Resource Include="MRIImages\IM-0001-0712.jpg" />
+    <Resource Include="MRIImages\IM-0001-0713.jpg" />
+    <Resource Include="MRIImages\IM-0001-0714.jpg" />
+    <Resource Include="MRIImages\IM-0001-0715.jpg" />
+    <Resource Include="MRIImages\IM-0001-0716.jpg" />
+    <Resource Include="MRIImages\IM-0001-0717.jpg" />
+    <Resource Include="MRIImages\IM-0001-0718.jpg" />
+    <Resource Include="MRIImages\IM-0001-0719.jpg" />
+    <Resource Include="MRIImages\IM-0001-0720.jpg" />
+    <Resource Include="MRIImages\IM-0001-0721.jpg" />
+    <Resource Include="MRIImages\IM-0001-0722.jpg" />
+    <Resource Include="MRIImages\IM-0001-0723.jpg" />
+    <Resource Include="MRIImages\IM-0001-0724.jpg" />
+    <Resource Include="MRIImages\IM-0001-0725.jpg" />
+    <Resource Include="MRIImages\IM-0001-0726.jpg" />
+    <Resource Include="MRIImages\IM-0001-0727.jpg" />
+    <Resource Include="MRIImages\IM-0001-0728.jpg" />
+    <Resource Include="MRIImages\IM-0001-0729.jpg" />
+    <Resource Include="MRIImages\IM-0001-0730.jpg" />
+    <Resource Include="MRIImages\IM-0001-0731.jpg" />
+    <Resource Include="MRIImages\IM-0001-0732.jpg" />
+    <Resource Include="MRIImages\IM-0001-0733.jpg" />
+    <Resource Include="MRIImages\IM-0001-0734.jpg" />
+    <Resource Include="MRIImages\IM-0001-0735.jpg" />
+    <Resource Include="MRIImages\IM-0001-0736.jpg" />
+    <Resource Include="MRIImages\IM-0001-0737.jpg" />
+    <Resource Include="MRIImages\IM-0001-0738.jpg" />
+    <Resource Include="MRIImages\IM-0001-0739.jpg" />
+    <Resource Include="MRIImages\IM-0001-0740.jpg" />
+    <Resource Include="MRIImages\IM-0001-0741.jpg" />
+    <Resource Include="MRIImages\IM-0001-0742.jpg" />
+    <Resource Include="MRIImages\IM-0001-0743.jpg" />
+    <Resource Include="MRIImages\IM-0001-0744.jpg" />
+    <Resource Include="MRIImages\IM-0001-0745.jpg" />
+    <Resource Include="MRIImages\IM-0001-0746.jpg" />
+    <Resource Include="MRIImages\IM-0001-0747.jpg" />
+    <Resource Include="MRIImages\IM-0001-0748.jpg" />
+    <Resource Include="MRIImages\IM-0001-0749.jpg" />
+    <Resource Include="MRIImages\IM-0001-0750.jpg" />
+    <Resource Include="MRIImages\IM-0001-0751.jpg" />
+    <Resource Include="MRIImages\IM-0001-0752.jpg" />
+    <Resource Include="MRIImages\IM-0001-0753.jpg" />
+    <Resource Include="MRIImages\IM-0001-0754.jpg" />
+    <Resource Include="MRIImages\IM-0001-0755.jpg" />
+    <Resource Include="MRIImages\IM-0001-0756.jpg" />
+    <Resource Include="MRIImages\IM-0001-0757.jpg" />
+    <Resource Include="MRIImages\IM-0001-0758.jpg" />
+    <Resource Include="MRIImages\IM-0001-0759.jpg" />
+    <Resource Include="MRIImages\IM-0001-0760.jpg" />
+    <Resource Include="MRIImages\IM-0001-0761.jpg" />
+    <Resource Include="MRIImages\IM-0001-0762.jpg" />
+    <Resource Include="MRIImages\IM-0001-0763.jpg" />
+    <Resource Include="MRIImages\IM-0001-0764.jpg" />
+    <Resource Include="MRIImages\IM-0001-0765.jpg" />
+    <Resource Include="MRIImages\IM-0001-0766.jpg" />
+    <Resource Include="MRIImages\IM-0001-0767.jpg" />
+    <Resource Include="MRIImages\IM-0001-0768.jpg" />
+    <Resource Include="MRIImages\IM-0001-0769.jpg" />
+    <Resource Include="MRIImages\IM-0001-0770.jpg" />
+    <Resource Include="MRIImages\IM-0001-0771.jpg" />
+    <Resource Include="MRIImages\IM-0001-0772.jpg" />
+    <Resource Include="MRIImages\IM-0001-0773.jpg" />
+    <Resource Include="MRIImages\IM-0001-0774.jpg" />
+    <Resource Include="MRIImages\IM-0001-0775.jpg" />
+    <Resource Include="MRIImages\IM-0001-0776.jpg" />
+    <Resource Include="MRIImages\IM-0001-0777.jpg" />
+    <Resource Include="MRIImages\IM-0001-0778.jpg" />
+    <Resource Include="MRIImages\IM-0001-0779.jpg" />
+    <Resource Include="MRIImages\IM-0001-0780.jpg" />
+    <Resource Include="MRIImages\IM-0001-0781.jpg" />
+    <Resource Include="MRIImages\IM-0001-0782.jpg" />
+    <Resource Include="MRIImages\IM-0001-0783.jpg" />
+    <Resource Include="MRIImages\IM-0001-0784.jpg" />
+    <Resource Include="MRIImages\IM-0001-0785.jpg" />
+    <Resource Include="MRIImages\IM-0001-0786.jpg" />
+    <Resource Include="MRIImages\IM-0001-0787.jpg" />
+    <Resource Include="MRIImages\IM-0001-0788.jpg" />
+    <Resource Include="MRIImages\IM-0001-0789.jpg" />
+    <Resource Include="MRIImages\IM-0001-0790.jpg" />
+    <Resource Include="MRIImages\IM-0001-0791.jpg" />
+    <Resource Include="MRIImages\IM-0001-0792.jpg" />
+    <Resource Include="MRIImages\IM-0001-0793.jpg" />
+    <Resource Include="MRIImages\IM-0001-0794.jpg" />
+    <Resource Include="MRIImages\IM-0001-0795.jpg" />
+    <Resource Include="MRIImages\IM-0001-0796.jpg" />
+    <Resource Include="MRIImages\IM-0001-0797.jpg" />
+    <Resource Include="MRIImages\IM-0001-0798.jpg" />
+    <Resource Include="MRIImages\IM-0001-0799.jpg" />
+    <Resource Include="MRIImages\IM-0001-0800.jpg" />
+    <Resource Include="MRIImages\IM-0001-0801.jpg" />
+    <Resource Include="MRIImages\IM-0001-0802.jpg" />
+    <Resource Include="MRIImages\IM-0001-0803.jpg" />
+    <Resource Include="MRIImages\IM-0001-0804.jpg" />
+    <Resource Include="MRIImages\IM-0001-0805.jpg" />
+    <Resource Include="MRIImages\IM-0001-0806.jpg" />
+    <Resource Include="MRIImages\IM-0001-0807.jpg" />
+    <Resource Include="MRIImages\IM-0001-0808.jpg" />
+    <Resource Include="MRIImages\IM-0001-0809.jpg" />
+    <Resource Include="MRIImages\IM-0001-0810.jpg" />
+    <Resource Include="MRIImages\IM-0001-0811.jpg" />
+    <Resource Include="MRIImages\IM-0001-0812.jpg" />
+    <Resource Include="MRIImages\IM-0001-0813.jpg" />
+    <Resource Include="MRIImages\IM-0001-0814.jpg" />
+    <Resource Include="MRIImages\IM-0001-0815.jpg" />
+    <Resource Include="MRIImages\IM-0001-0816.jpg" />
+    <Resource Include="MRIImages\IM-0001-0817.jpg" />
+    <Resource Include="MRIImages\IM-0001-0818.jpg" />
+    <Resource Include="MRIImages\IM-0001-0819.jpg" />
+    <Resource Include="MRIImages\IM-0001-0820.jpg" />
+    <Resource Include="MRIImages\IM-0001-0821.jpg" />
+    <Resource Include="MRIImages\IM-0001-0822.jpg" />
+    <Resource Include="MRIImages\IM-0001-0823.jpg" />
+    <Resource Include="MRIImages\IM-0001-0824.jpg" />
+    <Resource Include="MRIImages\IM-0001-0825.jpg" />
+    <Resource Include="MRIImages\IM-0001-0826.jpg" />
+    <Resource Include="MRIImages\IM-0001-0827.jpg" />
+    <Resource Include="MRIImages\IM-0001-0828.jpg" />
+    <Resource Include="MRIImages\IM-0001-0829.jpg" />
+    <Resource Include="MRIImages\IM-0001-0830.jpg" />
+    <Resource Include="MRIImages\IM-0001-0831.jpg" />
+    <Resource Include="MRIImages\IM-0001-0832.jpg" />
+    <Resource Include="MRIImages\IM-0001-0833.jpg" />
+    <Resource Include="MRIImages\IM-0001-0834.jpg" />
+    <Resource Include="MRIImages\IM-0001-0835.jpg" />
+    <Resource Include="MRIImages\IM-0001-0836.jpg" />
+    <Resource Include="MRIImages\IM-0001-0837.jpg" />
+    <Resource Include="MRIImages\IM-0001-0838.jpg" />
+    <Resource Include="MRIImages\IM-0001-0839.jpg" />
+    <Resource Include="MRIImages\IM-0001-0840.jpg" />
+    <Resource Include="MRIImages\IM-0001-0841.jpg" />
+    <Resource Include="MRIImages\IM-0001-0842.jpg" />
+    <Resource Include="MRIImages\IM-0001-0843.jpg" />
+    <Resource Include="MRIImages\IM-0001-0844.jpg" />
+    <Resource Include="MRIImages\IM-0001-0845.jpg" />
+    <Resource Include="MRIImages\IM-0001-0846.jpg" />
+    <Resource Include="MRIImages\IM-0001-0847.jpg" />
+    <Resource Include="MRIImages\IM-0001-0848.jpg" />
+    <Resource Include="MRIImages\IM-0001-0849.jpg" />
+    <Resource Include="MRIImages\IM-0001-0850.jpg" />
+    <Resource Include="MRIImages\IM-0001-0851.jpg" />
+    <Resource Include="MRIImages\IM-0001-0852.jpg" />
+    <Resource Include="MRIImages\IM-0001-0853.jpg" />
+    <Resource Include="MRIImages\IM-0001-0854.jpg" />
+    <Resource Include="MRIImages\IM-0001-0855.jpg" />
+    <Resource Include="MRIImages\IM-0001-0856.jpg" />
+    <Resource Include="MRIImages\IM-0001-0857.jpg" />
+    <Resource Include="MRIImages\IM-0001-0858.jpg" />
+    <Resource Include="MRIImages\IM-0001-0859.jpg" />
+    <Resource Include="MRIImages\IM-0001-0860.jpg" />
+    <Resource Include="MRIImages\IM-0001-0861.jpg" />
+    <Resource Include="MRIImages\IM-0001-0862.jpg" />
+    <Resource Include="MRIImages\IM-0001-0863.jpg" />
+    <Resource Include="MRIImages\IM-0001-0864.jpg" />
+    <Resource Include="MRIImages\IM-0001-0865.jpg" />
+    <Resource Include="MRIImages\IM-0001-0866.jpg" />
+    <Resource Include="MRIImages\IM-0001-0867.jpg" />
+    <Resource Include="MRIImages\IM-0001-0868.jpg" />
+    <Resource Include="MRIImages\IM-0001-0869.jpg" />
+    <Resource Include="MRIImages\IM-0001-0870.jpg" />
+    <Resource Include="MRIImages\IM-0001-0871.jpg" />
+    <Resource Include="MRIImages\IM-0001-0872.jpg" />
+    <Resource Include="MRIImages\IM-0001-0873.jpg" />
+    <Resource Include="MRIImages\IM-0001-0874.jpg" />
+    <Resource Include="MRIImages\IM-0001-0875.jpg" />
+    <Resource Include="MRIImages\IM-0001-0876.jpg" />
+    <Resource Include="MRIImages\IM-0001-0877.jpg" />
+    <Resource Include="MRIImages\IM-0001-0878.jpg" />
+    <Resource Include="MRIImages\IM-0001-0879.jpg" />
+    <Resource Include="MRIImages\IM-0001-0880.jpg" />
+    <Resource Include="MRIImages\IM-0001-0881.jpg" />
+    <Resource Include="MRIImages\IM-0001-0882.jpg" />
+    <Resource Include="MRIImages\IM-0001-0883.jpg" />
+    <Resource Include="MRIImages\IM-0001-0884.jpg" />
+    <Resource Include="MRIImages\IM-0001-0885.jpg" />
+    <Resource Include="MRIImages\IM-0001-0886.jpg" />
+    <Resource Include="MRIImages\IM-0001-0887.jpg" />
+    <Resource Include="MRIImages\IM-0001-0888.jpg" />
+    <Resource Include="MRIImages\IM-0001-0889.jpg" />
+    <Resource Include="MRIImages\IM-0001-0890.jpg" />
+    <Resource Include="MRIImages\IM-0001-0891.jpg" />
+    <Resource Include="MRIImages\IM-0001-0892.jpg" />
+    <Resource Include="MRIImages\IM-0001-0893.jpg" />
+    <Resource Include="MRIImages\IM-0001-0894.jpg" />
+    <Resource Include="MRIImages\IM-0001-0895.jpg" />
+    <Resource Include="MRIImages\IM-0001-0896.jpg" />
+    <Resource Include="MRIImages\IM-0001-0897.jpg" />
+    <Resource Include="MRIImages\IM-0001-0898.jpg" />
+    <Resource Include="MRIImages\IM-0001-0899.jpg" />
+    <Resource Include="MRIImages\IM-0001-0900.jpg" />
+    <Resource Include="MRIImages\IM-0001-0901.jpg" />
+    <Resource Include="MRIImages\IM-0001-0902.jpg" />
+    <Resource Include="MRIImages\IM-0001-0903.jpg" />
+    <Resource Include="MRIImages\IM-0001-0904.jpg" />
+    <Resource Include="MRIImages\IM-0001-0905.jpg" />
+    <Resource Include="MRIImages\IM-0001-0906.jpg" />
+    <Resource Include="MRIImages\IM-0001-0907.jpg" />
+    <Resource Include="MRIImages\IM-0001-0908.jpg" />
+    <Resource Include="MRIImages\IM-0001-0909.jpg" />
+    <Resource Include="MRIImages\IM-0001-0910.jpg" />
+    <Resource Include="MRIImages\IM-0001-0911.jpg" />
+    <Resource Include="MRIImages\IM-0001-0912.jpg" />
+    <Resource Include="MRIImages\IM-0001-0913.jpg" />
+    <Resource Include="MRIImages\IM-0001-0914.jpg" />
+    <Resource Include="MRIImages\IM-0001-0915.jpg" />
+    <Resource Include="MRIImages\IM-0001-0916.jpg" />
+    <Resource Include="MRIImages\IM-0001-0917.jpg" />
+    <Resource Include="MRIImages\IM-0001-0918.jpg" />
+    <Resource Include="MRIImages\IM-0001-0919.jpg" />
+    <Resource Include="MRIImages\IM-0001-0920.jpg" />
+    <Resource Include="MRIImages\IM-0001-0921.jpg" />
+    <Resource Include="MRIImages\IM-0001-0922.jpg" />
+    <Resource Include="MRIImages\IM-0001-0923.jpg" />
+    <Resource Include="MRIImages\IM-0001-0924.jpg" />
+    <Resource Include="MRIImages\IM-0001-0925.jpg" />
+    <Resource Include="MRIImages\IM-0001-0926.jpg" />
+    <Resource Include="MRIImages\IM-0001-0927.jpg" />
+    <Resource Include="MRIImages\IM-0001-0928.jpg" />
+    <Resource Include="MRIImages\IM-0001-0929.jpg" />
+    <Resource Include="MRIImages\IM-0001-0930.jpg" />
+    <Resource Include="MRIImages\IM-0001-0931.jpg" />
+    <Resource Include="MRIImages\IM-0001-0932.jpg" />
+    <Resource Include="MRIImages\IM-0001-0933.jpg" />
+    <Resource Include="MRIImages\IM-0001-0934.jpg" />
+    <Resource Include="MRIImages\IM-0001-0935.jpg" />
+    <Resource Include="MRIImages\IM-0001-0936.jpg" />
+    <Resource Include="MRIImages\IM-0001-0937.jpg" />
+    <Resource Include="MRIImages\IM-0001-0938.jpg" />
+    <Resource Include="MRIImages\IM-0001-0939.jpg" />
+    <Resource Include="MRIImages\IM-0001-0940.jpg" />
+    <Resource Include="MRIImages\IM-0001-0941.jpg" />
+    <Resource Include="MRIImages\IM-0001-0942.jpg" />
+    <Resource Include="MRIImages\IM-0001-0943.jpg" />
+    <Resource Include="MRIImages\IM-0001-0944.jpg" />
+    <Resource Include="MRIImages\IM-0001-0945.jpg" />
+    <Resource Include="MRIImages\IM-0001-0946.jpg" />
+    <Resource Include="MRIImages\IM-0001-0947.jpg" />
+    <Resource Include="MRIImages\IM-0001-0948.jpg" />
+    <Resource Include="MRIImages\IM-0001-0949.jpg" />
+    <Resource Include="MRIImages\IM-0001-0950.jpg" />
+    <Resource Include="MRIImages\IM-0001-0951.jpg" />
+    <Resource Include="MRIImages\IM-0001-0952.jpg" />
+    <Resource Include="MRIImages\IM-0001-0953.jpg" />
+    <Resource Include="MRIImages\IM-0001-0954.jpg" />
+    <Resource Include="MRIImages\IM-0001-0955.jpg" />
+    <Resource Include="MRIImages\IM-0001-0956.jpg" />
+    <Resource Include="MRIImages\IM-0001-0957.jpg" />
+    <Resource Include="MRIImages\IM-0001-0958.jpg" />
+    <Resource Include="MRIImages\IM-0001-0959.jpg" />
+    <Resource Include="MRIImages\IM-0001-0960.jpg" />
+    <Resource Include="MRIImages\IM-0001-0961.jpg" />
+    <Resource Include="MRIImages\IM-0001-0962.jpg" />
+    <Resource Include="MRIImages\IM-0001-0963.jpg" />
+    <Resource Include="MRIImages\IM-0001-0964.jpg" />
+    <Resource Include="MRIImages\IM-0001-0965.jpg" />
+    <Resource Include="MRIImages\IM-0001-0966.jpg" />
+    <Resource Include="MRIImages\IM-0001-0967.jpg" />
+    <Resource Include="MRIImages\IM-0001-0968.jpg" />
+    <Resource Include="MRIImages\IM-0001-0969.jpg" />
+    <Resource Include="MRIImages\IM-0001-0970.jpg" />
+    <Resource Include="MRIImages\IM-0001-0971.jpg" />
+    <Resource Include="MRIImages\IM-0001-0972.jpg" />
+    <Resource Include="MRIImages\IM-0001-0973.jpg" />
+    <Resource Include="MRIImages\IM-0001-0974.jpg" />
+    <Resource Include="MRIImages\IM-0001-0975.jpg" />
+    <Resource Include="MRIImages\IM-0001-0976.jpg" />
+    <Resource Include="MRIImages\IM-0001-0977.jpg" />
+    <Resource Include="MRIImages\IM-0001-0978.jpg" />
+    <Resource Include="MRIImages\IM-0001-0979.jpg" />
+    <Resource Include="MRIImages\IM-0001-0980.jpg" />
+    <Resource Include="MRIImages\IM-0001-0981.jpg" />
+    <Resource Include="MRIImages\IM-0001-0982.jpg" />
+    <Resource Include="MRIImages\IM-0001-0983.jpg" />
+    <Resource Include="MRIImages\IM-0001-0984.jpg" />
+    <Resource Include="MRIImages\IM-0001-0985.jpg" />
+    <Resource Include="MRIImages\IM-0001-0986.jpg" />
+    <Resource Include="MRIImages\IM-0001-0987.jpg" />
+    <Resource Include="MRIImages\IM-0001-0988.jpg" />
+    <Resource Include="MRIImages\IM-0001-0989.jpg" />
+    <Resource Include="MRIImages\IM-0001-0990.jpg" />
+    <Resource Include="MRIImages\IM-0001-0991.jpg" />
+    <Resource Include="MRIImages\IM-0001-0992.jpg" />
+    <Resource Include="MRIImages\IM-0001-0993.jpg" />
+    <Resource Include="MRIImages\IM-0001-0994.jpg" />
+    <Resource Include="MRIImages\IM-0001-0995.jpg" />
+    <Resource Include="MRIImages\IM-0001-0996.jpg" />
+    <Resource Include="MRIImages\IM-0001-0997.jpg" />
+    <Resource Include="MRIImages\IM-0001-0998.jpg" />
+    <Resource Include="MRIImages\IM-0001-0999.jpg" />
+    <Resource Include="MRIImages\IM-0001-1000.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
